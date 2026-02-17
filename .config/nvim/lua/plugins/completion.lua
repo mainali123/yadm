@@ -8,7 +8,8 @@ return {
           prefetch_on_insert = false,
         },
         list = {
-          selection = { preselect = true, auto_insert = true },
+          -- VS Code behavior: don't automatically insert or preselect
+          selection = { preselect = false, auto_insert = false },
         },
         menu = {
           border = "rounded",
@@ -22,10 +23,11 @@ return {
           window = { border = "rounded" },
         },
       },
-      -- Increase debounce to save CPU on low-spec machines
+      -- VS Code keymaps: Enter to accept, Tab to navigate
       keymap = {
-        preset = "default",
-        ["<C-y>"] = { "select_and_accept" },
+        preset = "enter",
+        ["<Tab>"] = { "select_next", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "fallback" },
       },
     },
   },
