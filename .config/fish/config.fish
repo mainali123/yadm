@@ -2,7 +2,7 @@ set -gx fish_user_paths ~/.local/scripts ~/.local/bin ~/go/bin ~/.cargo/bin /opt
 
 set -u fish_color_command blue
 set -u fish_color_command_current cyan
-set -u fish_color_autosuggestion brblack
+set -u fish_color_autosuggestion "#8a8a8a"
 function fish_user_key_bindings
     fish_vi_key_bindings
 end
@@ -28,3 +28,10 @@ end
 if status --is-interactive; and command -q pyenv
     pyenv init - | source
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/diwash/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
