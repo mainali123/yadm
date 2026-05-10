@@ -17,7 +17,8 @@
 # [keyboard]
 # bindings = [
 # { key = "Insert", mods = "Shift", action = "Paste" },
-# { key = "Insert", mods = "Control", action = "Copy" }
+# { key = "Insert", mods = "Control", action = "Copy" },
+  # { key = "Return", mods = "Shift", chars = "\u001B\r" }
 # ]
 
 [colors]
@@ -25,42 +26,46 @@ draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 # background = "#1a1e25"
-background = "#0e1111"
-foreground = '#7f85a3'
+background = "#000000"
+foreground = "#f2f2f2"
 
 [colors.cursor]
-text   = '#7f85a3'
-cursor = '#FFFFFF'
+text = "#000000"
+cursor = "#4adfff"
+
+[colors.vi_mode_cursor]
+text = "#000000"
+cursor = "#ffd966"
 
 [colors.normal]
-black   = '#444a73'
-red     = '#ff5370'
-green   = '#4fd6be'
-yellow  = '#ffc777'
-blue    = '#3e68d7'
-magenta = '#fc7b7b'
-cyan    = '#86e1fc'
-white   = '#d1d0d0'
+black = "#0c0c0c"
+red = "#ff5c57"
+green = "#7dff9a"
+yellow = "#ffd966"
+blue = "#6cb6ff"
+magenta = "#b07aff"
+cyan = "#4adfff"
+white = "#d0d0d0"
 
 [colors.bright]
-black   = '#828bb8'
-red     = '#ff98a4'
-green   = '#c3e88d'
-yellow  = '#ffc777'
-blue    = '#82aaff'
-magenta = '#ff966c'
-cyan    = '#b4f9f8'
-white   = '#5f8787'
+black = "#1f1f1f"
+red = "#ff7a76"
+green = "#a6ffb5"
+yellow = "#ffe38a"
+blue = "#8cc7ff"
+magenta = "#c59aff"
+cyan = "#7ae7ff"
+white = "#f2f2f2"
 
 [colors.selection]
-background = "0xbbc2cf"
-text = "0x1c1f24"
+background = "#151515"
+text = "#f2f2f2"
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 10
+size = 11
 
 [font.bold]
 family = "Iosevka Nerd Font Mono"
@@ -173,3 +178,6 @@ instance = "Alacritty"
 [window.padding]
 x = 6
 y = 6
+
+[terminal]
+osc52 = "CopyPaste"

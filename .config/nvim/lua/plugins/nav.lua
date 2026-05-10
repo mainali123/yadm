@@ -12,6 +12,14 @@ return {
     },
   },
 
+  -- Outline (Aerial) - LSP backend only
+  {
+    "stevearc/aerial.nvim",
+    opts = {
+      backends = { "lsp" },
+    },
+  },
+
   -- Sidebar (Neo-tree) optimization
   {
     "nvim-neo-tree/neo-tree.nvim",

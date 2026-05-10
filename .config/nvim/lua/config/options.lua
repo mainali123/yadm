@@ -8,8 +8,14 @@ vim.opt.fillchars = {
   foldsep = " ",
   diff = "╱",
   eob = " ",
+  vert = "│",
+  horiz = "─",
+  vertleft = "┤",
+  vertright = "├",
+  verthoriz = "┼",
 }
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldcolumn = "1"
 
+vim.opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-CursorInsert,r-cr-o:hor20-Cursor"

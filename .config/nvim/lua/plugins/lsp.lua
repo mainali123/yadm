@@ -1,7 +1,7 @@
 return {
   -- Mason for managing LSPs, Linters, and Formatters
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ui = {
         border = "rounded",
@@ -11,7 +11,7 @@ return {
 
   -- Auto-install LSPs based on file extension
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       automatic_installation = true,
     },
@@ -27,7 +27,7 @@ return {
         pyright = {}, -- Python logic
         ruff = {},    -- Python ultra-fast linting
         sqlls = {},   -- SQL
-        
+
         -- Web Essentials
         html = {},
         cssls = {},
