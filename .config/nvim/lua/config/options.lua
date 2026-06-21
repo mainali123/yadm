@@ -19,3 +19,4 @@ vim.opt.foldlevelstart = 99
 vim.opt.foldcolumn = "1"
 
 vim.opt.guicursor = "n-v-c-sm:block-Cursor,i-ci-ve:ver25-CursorInsert,r-cr-o:hor20-Cursor"
+vim.diagnostic.config({ virtual_text = false })
