@@ -48,3 +48,6 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+-- Ensure browser windows are fully opaque to prevent flickering during video calls
+o.window("helium", { opacity = "1.0 1.0" })
