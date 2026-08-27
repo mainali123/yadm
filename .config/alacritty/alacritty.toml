@@ -13,13 +13,6 @@
 # padding.x = 14
 # padding.y = 14
 # decorations = "None"
-#
-# [keyboard]
-# bindings = [
-# { key = "Insert", mods = "Shift", action = "Paste" },
-# { key = "Insert", mods = "Control", action = "Copy" },
-  # { key = "Return", mods = "Shift", chars = "\u001B\r" }
-# ]
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -86,6 +79,18 @@ style = "Regular"
 [font.offset]
 x = 0
 y = 1
+
+# Send Shift+Return as CSI-u so TUIs can distinguish it from Return without treating it as Alt+Return.
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b[13;2u"
+
+# Legacy encoding sends Alt+Shift+Return the same as Alt+Return; send CSI-u so tmux can match M-S-Enter.
+[[keyboard.bindings]]
+key = "Return"
+mods = "Alt|Shift"
+chars = "\u001b[13;4u"
 
 [[keyboard.bindings]]
 action = "Paste"
