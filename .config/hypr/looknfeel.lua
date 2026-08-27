@@ -3,9 +3,9 @@
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#general
 hl.config({
   general = {
-    -- No gaps between windows or borders.
-    gaps_in = 0,
-    gaps_out = 0,
+    -- 0.5 gap between windows.
+    gaps_in = 0.5,
+    gaps_out = 0.5,
   },
 })
 
