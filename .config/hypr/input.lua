@@ -11,8 +11,8 @@ hl.config({
     numlock_by_default = true,
 
     touchpad = {
-      -- Turn off natural (inverse) scrolling for traditional scrolling
-      natural_scroll = false,
+      -- Enable natural scrolling
+      natural_scroll = true,
 
       -- Use two-finger clicks for right-click instead of lower-right corner
       clickfinger_behavior = true,
